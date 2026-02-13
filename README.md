@@ -34,11 +34,3 @@ D-Clutter is a Manifest V3 browser extension that turns noisy pages into a focus
 
 - Clutter removal is heuristic-based and may hide useful elements on some websites.
 - You can disable D-Clutter from the popup on those pages.
-
-## Test when you only have GitHub access
-
-- Download the repo zip from **Code → Download ZIP**.
-- Unzip it and load as unpacked extension from `chrome://extensions` (Developer mode on).
-- You can also verify automated checks in the **Actions** tab (`Validate Extension` workflow).
-- For a full checklist, see `TESTING.md`.
-
