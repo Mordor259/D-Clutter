@@ -1,0 +1,27 @@
+name: Validate Extension
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate content script syntax
+        run: node --check src/content.js
+
+      - name: Validate popup script syntax
+        run: node --check popup/popup.js
+
+      - name: Validate manifest JSON
+        run: python -m json.tool manifest.json > /tmp/manifest.pretty.json
