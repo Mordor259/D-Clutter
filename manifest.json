@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "D-Clutter",
+  "version": "1.0.0",
+  "description": "Turn noisy web pages into a clean reading experience with optional dark/light themes and autoplay video controls.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "D-Clutter",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

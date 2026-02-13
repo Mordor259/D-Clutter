@@ -1,0 +1,103 @@
+:root {
+  --declutter-max-width: 760px;
+  --declutter-font-size: 19px;
+  --declutter-line-height: 1.75;
+  --declutter-bg: #f8f9fb;
+  --declutter-text: #1f2937;
+  --declutter-panel-bg: #ffffff;
+  --declutter-border: #d1d5db;
+}
+
+html.dclutter-enabled,
+body.dclutter-enabled {
+  background: var(--declutter-bg) !important;
+  color: var(--declutter-text) !important;
+}
+
+body.dclutter-enabled {
+  margin: 0 !important;
+}
+
+body.dclutter-enabled #dclutter-reader-shell {
+  max-width: var(--declutter-max-width);
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  font-size: var(--declutter-font-size);
+  line-height: var(--declutter-line-height);
+  font-family: "Charter", "Georgia", "Merriweather", serif;
+  color: var(--declutter-text);
+}
+
+body.dclutter-enabled #dclutter-reader-shell img,
+body.dclutter-enabled #dclutter-reader-shell video,
+body.dclutter-enabled #dclutter-reader-shell iframe {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.dclutter-hidden-noise {
+  display: none !important;
+}
+
+#dclutter-video-drawer {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: min(90vw, 360px);
+  z-index: 2147483646;
+  border: 1px solid var(--declutter-border);
+  background: var(--declutter-panel-bg);
+  color: var(--declutter-text);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+#dclutter-video-drawer summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 12px 14px;
+  font-weight: 600;
+}
+
+#dclutter-video-drawer summary::-webkit-details-marker {
+  display: none;
+}
+
+#dclutter-video-list {
+  max-height: 260px;
+  overflow: auto;
+  border-top: 1px solid var(--declutter-border);
+  padding: 8px;
+}
+
+.dclutter-video-item {
+  border: 1px solid var(--declutter-border);
+  border-radius: 8px;
+  margin: 6px 0;
+  padding: 8px;
+}
+
+.dclutter-video-item button {
+  margin-top: 8px;
+  width: 100%;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+.dclutter-video-item button:hover {
+  background: #1d4ed8;
+}
+
+html.dclutter-dark {
+  --declutter-bg: #111827;
+  --declutter-text: #e5e7eb;
+  --declutter-panel-bg: #1f2937;
+  --declutter-border: #374151;
+}
